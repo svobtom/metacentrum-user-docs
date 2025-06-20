@@ -52,9 +52,9 @@ The following command replaces an existing krb5.keytab! If you already have one,
 ```bash
 $ ssh user@skirit.metacentrum.cz '/software/remctl-2.12/bin/remctl -d kdccesnet.ics.muni.cz accounts nfskeytab' > /etc/krb5.keytab
 ```
-Set its ownership to root.root and rights to 600 as follows:
+Set its ownership to root:root (owner:group) and rights to 600 as follows:
 ```bash
-chown root.root /etc/krb5.keytab
+chown root:root /etc/krb5.keytab
 chmod 600 /etc/krb5.keytab
 ```
 ### Install client NFSv4 tools 
